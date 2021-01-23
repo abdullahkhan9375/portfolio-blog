@@ -1,0 +1,85 @@
+@import './../Variables.css';
+:root {
+    --time-x: 600px;
+    --time-y: 20px;
+}
+
+.container--time {
+    display: flex;
+    flex-direction: column;
+    background-color: transparent;
+    width: 10%;
+    z-index: 2;
+    height: 82vh;
+    justify-content: space-between;
+    align-items: center;
+    transform: translate(600%, 8%);
+    overflow: hidden;
+}
+
+.time--item {
+    cursor: pointer;
+    /* text-decoration: underline; */
+    text-underline-offset: 3px;
+    text-decoration-style: dotted;
+    transition: 0.5s ease-in-out;
+}
+
+.time--item:hover {}
+
+.time--item h2:hover {
+    color: var(--main-blue);
+}
+
+.time-2018 {}
+
+.time-2019 {}
+
+.time-2020 {}
+
+@media screen and (min-width: 3840px) and (min-height: 2160px) {
+    .container--time {
+        transform: translate(650%, 8%);
+    }
+    .time--item {
+        font-size: 3.5rem;
+    }
+}
+
+/* @media screen and (max-w) */
+
+@media screen and (max-width: 700px) {
+    .container--time {
+        position: relative;
+        flex-direction: row;
+        width: 70%;
+        height: 5%;
+        top: 10vh;
+        left: 12%;
+        transform: none;
+    }
+    .time--item {
+        cursor: pointer;
+        width: 18vh;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 0.8rem;
+        margin: 0em 0.2em;
+        text-align: center;
+    }
+    .time--item h2 {
+        color: var(--main-white-ALWAYS);
+    }
+    .time--item h2:hover {
+        color: var(--main-black);
+    }
+    .time-2018 {
+        background: var(--plate-1-lg);
+    }
+    .time-2019 {
+        background: var(--plate-2-lg);
+    }
+    .time-2020 {
+        background: var(--plate-3-lg);
+    }
+}

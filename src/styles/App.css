@@ -1,0 +1,24 @@
+@import './Variables.css';
+* {
+    margin: none;
+    padding: none;
+    box-sizing: border-box;
+    /* overflow: hidden; */
+}
+
+body {
+    font-family: 'Source Sans Pro', sans-serif;
+    width: 100vw;
+    height: 100vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-color: var(--main-Background);
+    /* background: url('./../img/background.jpg'); */
+    overflow-x: hidden;
+    transition: 1s cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.background-home {
+    
+}

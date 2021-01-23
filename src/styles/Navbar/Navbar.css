@@ -1,0 +1,90 @@
+@import '../Variables.css';
+.container--navbar {
+    position: fixed;
+    top: 42%;
+    z-index: 2;
+    display: flex;
+    height: 15%;
+    width: 95vh;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    transform: rotate(90deg);
+    transition: 0.5s ease-in-out;
+}
+
+.navbar-button {
+    transition: 0.5s ease-in-out;
+    z-index: 3;
+}
+
+#hamburger {
+    cursor: pointer;
+    position: fixed;
+    width: 4vh;
+    height: 4vh;
+    z-index: 3;
+
+    top: 3vh;
+    left : 3vh;
+    /* background-color: aqua; */
+    opacity: 1;
+}
+
+#hamburger path{
+    fill: var(--main-blue);
+}
+/* @media screen and (max-width: 1368px) {
+    #hamburger {
+        /* left: -15vw; */
+    
+
+/* 
+@media screen and (max-width: 992px) {
+    #hamburger {
+        /* left: -20vw; */
+
+/* 
+@media screen and (max-width: 600px) {
+    #hamburger {
+        /* left: -35vw; */
+
+/* @media screen and (max-width: 450px) {
+    #hamburger {
+        left: -50vw;
+    }
+} */ 
+
+.show {
+    opacity: 1;
+}
+
+.hide {
+    opacity: 0;
+}
+
+.navbar--item {
+    border-bottom: 2px solid var(--main-black);
+    transition: 0.5s ease-in-out;
+}
+
+.navbar--item * {
+    font-size: 1.5rem;
+    font-weight: 700;
+    text-decoration: none;
+    color: var(--main-black);
+    transition: 0.5s ease-in-out;
+}
+
+.navbar--item:hover {
+    transform: translateY(-10px);
+    border-bottom: 2px solid var(--main-blue);
+}
+
+.navbar--item *:hover {
+    color: var(--main-blue)
+}
+
+@media screen and (max-width: 550px) {
+    .container--navbar {}
+}

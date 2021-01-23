@@ -1,0 +1,150 @@
+:root {
+    --x-offset-timeline: 390%;
+    --y-offset-timeline: 0.75%;
+    --line-x-offset: 400%;
+    --anim-x-active: -200px;
+    --anim-x-hidden: 0px;
+}
+
+.container--timeline-main {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    z-index: -1;
+    transform: translate(-5%, -5%);
+    width: 105vw;
+    justify-content: space-around;
+    align-items: center;
+    height: 105vh;
+    transition: 0.5s;
+    overflow: hidden;
+}
+
+.container--timeline {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    /* background-color:darksalmon; */
+    height: 80vh;
+    transform: translate(var(--x-offset-timeline), var(--y-offset-timeline));
+}
+
+.timeline--half-circle {
+    width: 8vh;
+    height: 4vh;
+    background-color: transparent;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border: 5px solid var(--main-blue);
+    border-bottom: 0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.circle-1 {
+    position: relative;
+    transform: rotate(-90deg);
+}
+
+.circle-2 {
+    position: relative;
+    transform: rotate(-90deg);
+}
+
+.timeline--line {
+    position: relative;
+    height: 29.5vh;
+    width: 0.5vh;
+    background-color: var(--main-blue);
+}
+
+.line-1 {
+    transform: translateX(var(--line-x-offset));
+}
+
+.line-2 {
+    transform: translateX(calc(var(--line-x-offset) - 50%));
+}
+
+.circle-3 {
+    position: relative;
+    transform: rotate(-90deg);
+}
+
+@media screen and (min-width: 3840px) and (min-height: 2160px){
+    :root {
+        --x-offset-timeline: 370%;
+        --line-x-offset: 900%;
+    }
+    .timeline--line{
+        width: 0.2vh;
+        height: 28vh;
+    }
+}
+
+@media screen and (max-width: 1930px){
+    :root{
+        --x-offset-timeline: 390%;
+    }
+}
+
+@media screen and (max-width: 1450px){
+    :root{
+        --x-offset-timeline: 450%;
+    }
+}
+
+
+@media screen and (max-width: 1368px) {
+    :root {
+        --x-offset-timeline: 270%;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    :root {
+        --x-offset-timeline: 190%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    :root {
+        --x-offset-timeline: 180%;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    :root {
+        --x-offset-timeline: 100%;
+    }
+
+    .container--timeline-main {
+        z-index: -3;
+        justify-content:flex-end;
+    }
+
+    .timeline--half-circle {
+        display: none;
+        width: 5vw;
+        height: 2.5vw;
+    }
+    .timeline--line {
+        display: none;
+        height: 28vw;
+        margin: 0.2em 0.3em 0.2em 0em;
+    }
+    .container--timeline {
+        transform: translate(0px, 0px) rotateZ(90deg) scale(1);
+        display: none;
+        height: 100%;
+        justify-content: center;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    :root {
+        --x-offset-timeline: 40%;
+    }
+}

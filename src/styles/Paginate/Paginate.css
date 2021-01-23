@@ -1,0 +1,20 @@
+.container--paginate {
+    width: 100%;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    color: var(--main-black);
+    align-items: center;
+    margin: 1em 0em 0em 0em;
+}
+
+.paginate--item {
+    cursor: pointer;
+    width: 2vw;
+    height: 2vh;
+    font-size: 1.1rem;
+    margin: 0.2em 0.5em;
+    text-align: center;
+    text-decoration: underline;
+}

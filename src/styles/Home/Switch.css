@@ -1,0 +1,107 @@
+@import './../Variables.css';
+:root {
+    /* Offset */
+    --switch-offset-x: 40%;
+    --switch-offset-y: -48%;
+    /*Switch theme*/
+    --switch-theme-x: 54%;
+    --switch-theme-y: 50%;
+    /*Switch 1 */
+    --switch-one-x: 140%;
+    --switch-one-y: 55%;
+    --switch-one-offset-x: 0%;
+    --switch-one-offset-y: 0%;
+    /* Switch 2 */
+    --switch-two-x: 140%;
+    --switch-two-y: 60%;
+    /* Switch 3 */
+    --switch-three-x: 140%;
+    --switch-three-y: 65%;
+}
+
+.container---switch-main {
+    z-index: 2;
+}
+
+.switch--item {
+    font-weight: 'Playfair Display';
+    cursor: pointer;
+    z-index: 2;
+    height: 60px;
+    position: fixed;
+    width: 60px;
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1em 1em;
+    border: 1px solid var(--main-blue);
+}
+
+.switch--item:hover {
+    border: 1px solid var(--main-blue);
+}
+
+.switch--one {
+    z-index: 2;
+    background-color: var(--main-light-prim);
+    color: var(--main-light-sec);
+    top: calc(var(--switch-theme-y) + var(--switch-offset-y));
+    left: calc(var(--switch-theme-x) + var(--switch-offset-x));
+}
+
+.switch--two {
+    z-index: 2;
+    background-color: var(--main-dark-prim);
+    color: var(--main-dark-sec);
+    top: calc(var(--switch-theme-y) + var(--switch-offset-y));
+    left: calc(var(--switch-theme-x) + var(--switch-offset-x));
+}
+
+.switch--three {
+    z-index: 2;
+    background-color: var(--main-blue-prim);
+    color: var(--main-blue-sec);
+    top: calc(var(--switch-theme-y) + var(--switch-offset-y));
+    left: calc(var(--switch-theme-x) + var(--switch-offset-x));
+}
+
+.switch--theme {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 3;
+    color: var(--main-black);
+    top: calc(var(--switch-theme-y) + var(--switch-offset-y));
+    left: calc(var(--switch-theme-x) + var(--switch-offset-x));
+}
+
+@media screen and (max-width: 1140px) {
+    :root {
+        --switch-offset-x: 38%;
+    }
+}
+
+@media screen and (max-width: 800px) {
+    :root {
+        --switch-offset-x: 34%;
+    }
+    .switch--item {
+        width: 50px;
+        height: 50px;
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 450px) {
+    :root {
+        --switch-offset-x: 29%;
+    }
+}
+
+#mode_svg{
+    color: var(--main-blue);
+    
+}
+
