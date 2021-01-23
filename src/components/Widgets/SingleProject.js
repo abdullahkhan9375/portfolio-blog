@@ -1,7 +1,6 @@
 import React, {useEffect, useState} from 'react'
 import {useParams} from 'react-router-dom';
 import sanityClient from '../../client'
-import {Link} from 'react-router-dom';
 import Spinner from 'react-bootstrap/Spinner';
 import github from './../../img/github.png'
 import './../../styles/Projects/SingleProject.css';
@@ -85,10 +84,10 @@ export default function SingleProject() {
     return (
         <div className = "container--sproject-main">
            <h1> {project.title}</h1>
-           <img src = {project.image.asset.url} />
+           <img src = {project.image.asset.url} alt = {"project"} />
            <h4> {project.description} </h4>
            <div className = "sproject--footer">
-              <img  style = {{width : '30px' }} className = "gitImg" src = {github}/> 
+              <img  style = {{width : '30px' }} className = "gitImg" src = {github} alt = {"github icon"}/> 
               <a href = {project.gitLink}> Project Link </a>  
            </div>
            {/* <div className = "container---background" style = {{background : `url(${project.image.asset.url})`}}>

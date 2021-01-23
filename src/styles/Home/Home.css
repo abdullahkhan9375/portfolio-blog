@@ -87,7 +87,12 @@
     .container--item {}
     .headline {
         font-size: 2rem;
-        transform: translateX(-18px);
+        transform: translateX(-45px);
+        margin-right: 0em;
+    }
+    .special {
+        margin-left: -1em;
+        transform: translateX(-10px);
     }
     .header-1 {
         font-size: 2rem;

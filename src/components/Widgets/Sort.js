@@ -58,7 +58,7 @@ export default function Sort(props) {
 
 
 // const [sortQuery, setSortQuery] = useState (queries[0]);
-const [button, setButton] = useState(0);
+// const [button, setButton] = useState(0);
 const [queryType, setqueryType] = useState(0);
 
 

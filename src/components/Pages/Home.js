@@ -2,7 +2,7 @@ import React from 'react'
 import './../../styles/Home/Home.css';
 import {useState, useEffect} from 'react';
 import {useTransition, animated} from 'react-spring';
-import {motion} from 'framer-motion';
+// import {motion} from 'framer-motion';
 import linkedin from './../../img/linkedin.png';
 import github from './../../img/github.png';
 import Footer from './../Widgets/Footer';
@@ -88,8 +88,8 @@ export default function Home() {
                         return<animated.span key = {key} className = {"special headline"} style = {{...props, marginLeft : '0.0em'}} > {" "} {item.content} </animated.span>})}
                 </div>
                 <div className = "container--icons">
-                    <a   href = "https://github.com/abdullahkhan9375"> <img className = "icon--github" src = {github}/> </a>
-                    <a href = "https://www.linkedin.com/in/abdullah-khan-91026917b/"> < img  className = "icon--linkedin" src = {linkedin}/></a>
+                    <a   href = "https://github.com/abdullahkhan9375"> <img className = "icon--github" src = {github} alt = {"github"}/> </a>
+                    <a href = "https://www.linkedin.com/in/abdullah-khan-91026917b/"> < img  className = "icon--linkedin" src = {linkedin} alt = {"linkedin"}/></a>
                     
                 </div>
                         <Footer></Footer>

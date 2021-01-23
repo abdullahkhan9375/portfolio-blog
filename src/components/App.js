@@ -7,11 +7,8 @@ import Post from './Widgets/Post';
 import SinglePost from './Widgets/SinglePost'
 import Project from './Widgets/Project';
 import Navbar from './Widgets/Navbar';
-import Sort from './Widgets/Sort';
+// import Sort from './Widgets/Sort';
 import SingleProject from './Widgets/SingleProject';
-import {ThemeProvider} from 'styled-components';
-import {lightTheme} from './Widgets/Theme';
-import {GlobalStyles } from './Widgets/Global';
 import Switch_Mode from './Widgets/Switch_Mode';
 
 

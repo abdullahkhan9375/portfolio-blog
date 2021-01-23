@@ -1,19 +1,11 @@
 import React, {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import sanityClient from '../../client'
-import imageUrlBuilder from "@sanity/image-url";
 import BlockContent from '@sanity/block-content-to-react';
 import '../../styles/SinglePost/SinglePost.css';
-import tag from '../../img/tag.png';
 import Spinner from 'react-bootstrap/Spinner';
 
 
-
-
-const builder = imageUrlBuilder(sanityClient);
-function urlFor(source){
-    return builder.image(source);
-}
 
 
 
@@ -21,7 +13,7 @@ export default function SinglePost() {
 
     const [singlePost, setSinglePost] = useState(null);
     const {slug} = useParams();
-    console.log(slug)
+
 
     useEffect(()=> {
         sanityClient.fetch(`*[slug.current == "${slug}"]{
@@ -51,9 +43,6 @@ export default function SinglePost() {
    
     if (!singlePost){
         return <Spinner animation="grow" />
-    }
-    if (singlePost){
-        const date = singlePost.publishedAt
     }
     return (
         <div className = "container--main-sp">

@@ -22,7 +22,6 @@ export default function Switch_Mode( props ) {
 
     useEffect ( () => {
         checkWindow();
-        console.log(winWidth)
     }, [hover])
 
     const checkWindow = () => {
