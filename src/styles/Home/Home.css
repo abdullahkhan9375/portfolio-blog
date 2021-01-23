@@ -85,6 +85,7 @@
 @media screen and (max-width : 500px){
     .container--home{}
     .container--item{
+        margin: -1em;
         font-size: 4vh;
     }
     .headline {
