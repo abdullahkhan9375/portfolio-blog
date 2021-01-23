@@ -15,7 +15,7 @@
 
 .container--post {
     display: flex;
-    height: 120vh;
+    height: 110vh;
     justify-content: center;
     align-items: flex-start;
     flex-wrap: wrap;
@@ -243,8 +243,18 @@ option {
 }
 
 @media screen and (max-width:500px) {
+    .container--main-post {
+        margin-top: 3em;
+        margin-left: 0em;
+        width: 100%;
+    }
     .container--post {
         width: 100%;
+        /* margin: 10em; */
+    }
+    .main--heading h1{
+        padding: 0em;
+        margin: 0em;
     }
     .post--item {
         width: 100%;
@@ -279,6 +289,6 @@ option {
     margin-bottom: 0.1em;
 }
 
-#tag--icon{
-    color : var(--main-blue);
+#tag--icon {
+    color: var(--main-blue);
 }

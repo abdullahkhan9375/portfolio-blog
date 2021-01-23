@@ -127,8 +127,8 @@ p {
         font-size: 1rem;
     }
     .container--main-post-sp {
-        margin: 0em;
-        width: 70%;
+        margin: 2em 0em 0em -1em;
+        width: 85%;
     }
     .container--main-sp {
         width: 100%;
