@@ -113,25 +113,30 @@ p {
     }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 750px) {
     .container--main-post-sp h1 {
-        font-size: 2rem;
-    }
-    .container--main-post-sp h3 {
         font-size: 1.5rem;
     }
-    .container--main-post-sp p {
+    .container--main-post-sp h3 {
         font-size: 1rem;
+    }
+    .container--main-post-sp p {
+        font-size: 0.9rem;
     }
     .container--main-post-sp h4 {
-        font-size: 1rem;
+        font-size: 0.95rem;
     }
     .container--main-post-sp {
-        margin: 2em 0em 0em -4em;
-        width: 80%;
+        margin-top: 2em;
+        transform: translateX(80px);
+        padding: 0em;
+        width: 100%;
+    }
+    .container--main-post-sp div {
+        width: 90%;
     }
     .container--main-sp {
-        width: 100%;
+        width: 80%;
         display: flex;
         flex-wrap: nowrap;
         flex-direction: column;
