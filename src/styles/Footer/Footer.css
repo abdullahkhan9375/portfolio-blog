@@ -1,23 +1,24 @@
 @import '../Variables.css';
-
-.container--footer{
+.container--footer {
     position: absolute;
     /* top: 0%; */
     bottom: -1%;
-    left : -1%;
-    background-color:var(--main-blue);
+    left: -5%;
+    background-color: var(--main-blue);
     margin: 0em 0em 0em 0em;
-    height: 8vh;
-    width: 100vw;
+    padding: 0em;
+    height: 10vh;
+    width: 110%;
 }
 
-.footer--items{
-    display:flex;
-    color : var(--main-black);
+.footer--items {
+    
+    display: flex;
+    color: var(--main-black);
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    padding: 0.5em 0em 0em 0em;
+    padding: 0.5em 0em;
 }
 
 .footer--items p {

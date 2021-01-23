@@ -7,12 +7,14 @@
     position: relative;
     grid-template-columns: repeat(12, 1fr);
     grid-template-rows: repeat(12, 1fr);
+    overflow: hidden;
 }
 
 .container--item{
     font-size:  6rem;
     color :var(--main-black);
     cursor: pointer;
+    /* overflow: hidden; */
 }
 
 .header-1{
@@ -37,6 +39,7 @@
     grid-row: 6/7;
     font-size: 8rem;
     font-weight: normal;
+    /* overflow: hidden; */
 }
 
 .special {
@@ -78,7 +81,7 @@
     }
 }
 
-@media screen and (max-width : 400px){
+@media screen and (max-width : 500px){
     .container--home{}
     .container--item{
         font-size: 4vh;
