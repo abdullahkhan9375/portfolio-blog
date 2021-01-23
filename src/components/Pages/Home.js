@@ -76,23 +76,17 @@ export default function Home() {
     return (
         
         <div className = "container--home">
-                <motion.div drag dragElastic = {0.5} dragConstraints = {{top : 10, left : -50, right : 50, bottom: 50
-                }}
-                className = "container--item header-1">
+                <div className = "container--item header-1">
                     Hi. I'm
-                </motion.div>
-                <motion.div drag dragElastic = {0.5} dragConstraints = {{top : -10, left : -50, right : 50, bottom: 50
-                }}
-                className = "container--item header-2">
+                </div>
+                <div className = "container--item header-2">
                     Abdullah Khan
-                </motion.div>
-                <motion.div drag dragElastic = {0.5} dragConstraints = {{top : 10, left : -50, right : 50, bottom: 50
-                }}
-className = "container--item headline">
+                </div>
+                <div className = "container--item headline">
                     I like to
                     {transitions.map(({item, props, key}) => {
                         return<animated.span key = {key} className = {"special headline"} style = {{...props, marginLeft : '0.0em'}} > {" "} {item.content} </animated.span>})}
-                </motion.div>
+                </div>
                 <div className = "container--icons">
                     <a   href = "https://github.com/abdullahkhan9375"> <img className = "icon--github" src = {github}/> </a>
                     <a href = "https://www.linkedin.com/in/abdullah-khan-91026917b/"> < img  className = "icon--linkedin" src = {linkedin}/></a>
