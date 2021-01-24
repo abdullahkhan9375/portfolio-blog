@@ -16,13 +16,19 @@ export default function Switch_Mode( props ) {
     const [anim2, setAnim2] = useState(defAnim)
     const [anim3, setAnim3] = useState(defAnim)
     const [hover, setHover] = useState (false);
-
+    const [theme, selectTheme] = useState(null)
+    const [selected, setSelected] = useState(false)
     const [winWidth, setWinWidth] = useState(window.innerWidth);
 
 
     useEffect ( () => {
         checkWindow();
     }, [hover])
+
+    useEffect (() => {
+        setSelected(false)
+        console.log(selected)
+    }, [selected])
 
     const checkWindow = () => {
             setWinWidth(window.innerWidth)
@@ -67,13 +73,15 @@ export default function Switch_Mode( props ) {
 
     const setTheme = (e) => {
         props.getTheme(e.target.innerText)
+        selectTheme(e.target.innerText)
+        hoverAnimEnd()
     }
 
 
 
     return (
         <div className = "container---switch-main">
-            <motion.div onMouseEnter = {hoverAnimStart} onMouseLeave= {() => setTimeout(hoverAnimEnd, 1500)} className = "switch--item switch--theme">
+            <motion.div onClick = {selected === false ? hoverAnimStart : hoverAnimEnd} className = "switch--item switch--theme">
                 <span id = "mode_svg">
                 <i class="far fa-sun fa-lg"></i>
                 </span>

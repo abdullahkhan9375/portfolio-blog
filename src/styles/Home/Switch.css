@@ -8,15 +8,15 @@
     --switch-theme-y: 50%;
     /*Switch 1 */
     --switch-one-x: 140%;
-    --switch-one-y: 55%;
+    --switch-one-y: 57%;
     --switch-one-offset-x: 0%;
     --switch-one-offset-y: 0%;
     /* Switch 2 */
     --switch-two-x: 140%;
-    --switch-two-y: 60%;
+    --switch-two-y: 64.5%;
     /* Switch 3 */
     --switch-three-x: 140%;
-    --switch-three-y: 65%;
+    --switch-three-y: 72%;
 }
 
 .container---switch-main {

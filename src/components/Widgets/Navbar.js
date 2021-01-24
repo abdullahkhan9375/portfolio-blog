@@ -14,8 +14,8 @@ export default function Navbar() {
 
     const props = useSpring({
         config : {mass : 0.01, tension : 2000, friction : 10},
-        to : {left : active ? '-43vh' : '-50vh'},
-        from : {left : '-50vh'}
+        to : {left : active ? '-43vh' : '-55vh'},
+        from : {left : '-55vh'}
     })
 
     const props_ham = useSpring({

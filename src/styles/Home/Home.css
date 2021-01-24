@@ -55,6 +55,7 @@
 .icon--github {
     width: 50px;
     margin: 1em;
+    fill : var(--main-blue)
 }
 
 .icon--linkedin {

@@ -30,8 +30,63 @@
     transform: translate(var(--x-offset-timeline), var(--y-offset-timeline));
 }
 
+/* .cross_1{
+    top: ;
+} */
+
+.container--cross {
+    /* position: absolute; */
+    cursor: default;
+    width: 25px;
+    height: 25px;
+    /* background-color: aqua; */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transform: rotateZ(45deg);
+    color: transparent;
+}
+
+.cross-1 {
+    width: 75%;
+    height: 9%;
+    border-radius: 4px;
+    background-color: black;
+    transform: translateX(-0.3px);
+}
+
+.cross-2 {
+    width: 75%;
+    height: 9%;
+    border-radius: 4px;
+    background-color: black;
+    transform: rotateZ(90deg) translateX(-2.3px);
+}
+
+#cross_1 {
+    position: absolute;
+    z-index: 3;
+    top: 10%;
+    left: 50.4%;
+}
+
+#cross_2 {
+    position: absolute;
+    z-index: 3;
+    top: 46.6%;
+    left: 50.4%;
+}
+
+#cross_3 {
+    position: absolute;
+    z-index: 3;
+    top: 84.6%;
+    left: 49.7%;
+}
+
 .timeline--half-circle {
-    width: 8vh;
+    width: 7.79vh;
     height: 4vh;
     background-color: transparent;
     border-top-left-radius: 100px;
@@ -73,29 +128,28 @@
     transform: rotate(-90deg);
 }
 
-@media screen and (min-width: 3840px) and (min-height: 2160px){
+@media screen and (min-width: 3840px) and (min-height: 2160px) {
     :root {
         --x-offset-timeline: 370%;
         --line-x-offset: 900%;
     }
-    .timeline--line{
+    .timeline--line {
         width: 0.2vh;
         height: 28vh;
     }
 }
 
-@media screen and (max-width: 1930px){
-    :root{
+@media screen and (max-width: 1930px) {
+    :root {
         --x-offset-timeline: 390%;
     }
 }
 
-@media screen and (max-width: 1450px){
-    :root{
+@media screen and (max-width: 1450px) {
+    :root {
         --x-offset-timeline: 450%;
     }
 }
-
 
 @media screen and (max-width: 1368px) {
     :root {
@@ -103,9 +157,9 @@
     }
 }
 
-@media screen and (max-width: 1024px) {
+@media screen and (max-width: 1025px) {
     :root {
-        --x-offset-timeline: 190%;
+        --x-offset-timeline: 260%;
     }
 }
 
@@ -115,16 +169,18 @@
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
+    
     :root {
         --x-offset-timeline: 100%;
     }
-
+    .container--cross{
+        display: none;
+    }
     .container--timeline-main {
         z-index: -3;
-        justify-content:flex-end;
+        justify-content: flex-end;
     }
-
     .timeline--half-circle {
         display: none;
         width: 5vw;

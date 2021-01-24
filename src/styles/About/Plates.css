@@ -63,6 +63,7 @@
     font-size: 1rem;
     flex-direction: column;
     justify-content: center;
+    overflow: hidden;
 }
 
 .timeplate--content-1 {
@@ -136,7 +137,26 @@
     }
 }
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 1025px) {
+    :root {}
+    .container--timeplate {
+        width: 35vw;
+    }
+    .timeplate--content {
+        font-size: 0.9rem;
+    }
+    .title--1 {
+        transform: translate(0%, -180%) rotateZ(90deg);
+    }
+    .title--2 {
+        transform: translate(0%, -205%) rotateZ(90deg);
+    }
+    .title--3 {
+        transform: translate(0%, -215%) rotateZ(90deg);
+    }
+}
+
+@media screen and (max-width: 768px) {
     :root {
         --plate-height: 75vh;
         --plate-y-offset: 12vh;
@@ -150,14 +170,84 @@
     }
     .title--1 {
         font-size: 4.5rem;
-        transform: translate(0%, -165%) rotateZ(90deg);
+        transform: translate(0%, -115%) rotateZ(90deg);
     }
     .title--2 {
         font-size: 4rem;
-        transform: translate(0%, -190%) rotateZ(90deg);
+        transform: translate(0%, -140%) rotateZ(90deg);
     }
     .title--3 {
         font-size: 3.8rem;
+        transform: translate(0%, -150%) rotateZ(90deg);
+    }
+}
+
+@media screen and (max-width: 430px) {
+    :root {
+        --plate-y-offset: 13vh;
+    }
+    .container--timeplate {
+        z-index: 1;
+    }
+    .title--1 {
+        font-size: 4rem;
+        transform: translate(0%, -170%) rotateZ(90deg);
+    }
+    .title--2 {
+        font-size: 3.5rem;
         transform: translate(0%, -200%) rotateZ(90deg);
+    }
+    .title--3 {
+        font-size: 3.2rem;
+        transform: translate(0%, -210%) rotateZ(90deg);
+    }
+    .timeplate--content {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 380px) {
+    :root {
+        --plate-y-offset: 13vh;
+    }
+    .container--timeplate {
+        z-index: 1;
+    }
+    .title--1 {
+        font-size: 4rem;
+        transform: translate(0%, -170%) rotateZ(90deg);
+    }
+    .title--2 {
+        font-size: 3.5rem;
+        transform: translate(0%, -200%) rotateZ(90deg);
+    }
+    .title--3 {
+        font-size: 3.2rem;
+        transform: translate(0%, -210%) rotateZ(90deg);
+    }
+    .timeplate--content {
+        font-size: 0.8rem;
+    }
+}
+
+@media screen and (max-width: 321px) {
+    :root {
+        --plate-y-offset: 13vh;
+    }
+    .container--timeplate {}
+    .title--1 {
+        font-size: 4rem;
+        transform: translate(0%, -170%) rotateZ(90deg);
+    }
+    .title--2 {
+        font-size: 3.5rem;
+        transform: translate(0%, -200%) rotateZ(90deg);
+    }
+    .title--3 {
+        font-size: 3.2rem;
+        transform: translate(0%, -210%) rotateZ(90deg);
+    }
+    .timeplate--content {
+        font-size: 0.7rem;
     }
 }

@@ -1,7 +1,7 @@
 @import './../Variables.css';
 :root {
     --time-x: 600px;
-    --time-y: 20px;
+    --time-y: 30px;
 }
 
 .container--time {
@@ -13,7 +13,7 @@
     height: 82vh;
     justify-content: space-between;
     align-items: center;
-    transform: translate(600%, 8%);
+    transform: translate(600%, 8.3%);
     overflow: hidden;
 }
 
@@ -48,7 +48,7 @@
 
 /* @media screen and (max-w) */
 
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 768px) {
     .container--time {
         position: relative;
         flex-direction: row;

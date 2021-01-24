@@ -98,7 +98,7 @@ export default function About() {
             setWinWidth(window.innerWidth)
             setAnim_x('-130%')
         }
-        if (window.innerWidth <= 700){
+        if (window.innerWidth <= 768){
             setWinWidth(window.innerWidth)
 
         }
@@ -247,17 +247,46 @@ export default function About() {
         </div>
         <div className = "container--time">
             
-                <div onClick = {(e) => handleMouseClick(e)} onMouseEnter = {(e) => handleMouseEnter(e)} onMouseLeave = {(e) => handleMouseLeave(e)} className = "time--item time-2018">
+                <div onClick = {(e) => handleMouseEnter(e)} className = "time--item time-2018">
                     <h2> 2018 </h2>
                 </div>
-                <div  onClick = {(e) => handleMouseClick(e)} onMouseOver = {(e) => handleMouseEnter(e)} onMouseLeave = {(e) => handleMouseLeave(e)}className = "time--item time-2019">
+                <div onClick = {(e) => handleMouseEnter(e)} className = "time--item time-2019">
                     <h2> 2019 </h2>
                 </div>
-                <motion.div  onMouseOver = {(e) => handleMouseEnter(e)} onMouseLeave = {(e) => handleMouseLeave(e)}className = "time--item time-2020">
+                <div  onClick = {(e) => handleMouseEnter(e)} className = "time--item time-2020">
                     <h2> 2020 </h2>
-                </motion.div>
-            
+                </div>
         </div>
+        <motion.div id = "cross_1" className = "container--cross" transition = {spring} animate = {{opacity : circ2 ? 1 : 0}} 
+        onClick = {(e) => handleMouseLeave(e)}>
+            2018
+                    <div  onClick = {(e) => handleMouseLeave(e)} className = "cross-1">
+                        2018
+                    </div>
+                    <div  onClick = {(e) => handleMouseLeave(e)} className = "cross-2">
+                        2018
+                    </div>
+
+                </motion.div>
+                <motion.div id = "cross_1" className = "container--cross" transition = {spring} animate = {{opacity : circ1 ? 1 : 0}} id = "cross_2" onClick = {(e) => handleMouseLeave(e)} className = "container--cross">
+                    2019
+                    <div  onClick = {(e) => handleMouseLeave(e)} className = "cross-1">
+                    2019
+                    </div>
+                    <div  onClick = {(e) => handleMouseLeave(e)} className = "cross-2">
+                        2019
+                    </div>
+
+                </motion.div>
+                <motion.div id = "cross_1" className = "container--cross" transition = {spring} animate = {{opacity : circ3 ? 1 : 0}} id = "cross_3" onClick = {(e) => handleMouseLeave(e)} className = "container--cross">
+                    <div onClick = {(e) => handleMouseLeave(e)} className = "cross cross-1">
+                    2020
+                    </div>
+                    <div onClick = {(e) => handleMouseLeave(e)} className = "cross cross-2">
+                    2020  
+                    </div>
+                    2020
+                </motion.div>
         <motion.div ref = {back} transition = {{duration : 1}} animate = {anim} className = {`container--timeplate ${plate.class}`}>
             {plate === null ? null : <TimePlate plate = {plate}></TimePlate>}
         </motion.div>
