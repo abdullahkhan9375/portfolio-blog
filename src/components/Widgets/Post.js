@@ -56,13 +56,13 @@ export default function Post() {
         const res2 = async () => {
             const data2 = await sanityClient.fetch(`*[_type == "post"]`)
             setLength(data2.length);
-            console.log(length)
+            
         }
 
         
         res();
         res2();
-        console.log(postData)
+        
          
     }, [query]);
 

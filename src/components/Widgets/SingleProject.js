@@ -68,6 +68,7 @@ export default function SingleProject() {
         setProject(res[0])
     }
     req()
+    
     // Links(project);
 
 }, [])
@@ -80,7 +81,6 @@ export default function SingleProject() {
     if (project === null){
         return <Spinner animation = "border"/>
     }
-    console.log(project)
     return (
         <div className = "container--sproject-main">
            <h1> {project.title}</h1>

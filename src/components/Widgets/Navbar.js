@@ -54,7 +54,7 @@ useOutsideAlerter(navRef)
         toggle(true);
         buttRef.current.classList.add('hide')
         buttRef.current.classList.remove('show')
-        console.log('true')
+        
     }
 
     return (
