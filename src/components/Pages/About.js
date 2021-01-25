@@ -5,6 +5,7 @@ import './../../styles/About/Plates.css';
 import {motion} from 'framer-motion';
 import {useState, useEffect, useRef} from 'react';
 import TimePlate from './../Widgets/TimePlate';
+import Switch from 'react-bootstrap/esm/Switch';
 
 
 const timePlates = [
@@ -48,6 +49,8 @@ export default function About() {
     const [circ2, setCirc2] = useState(false);
     const [circ3, setCirc3] = useState(false);
     const [plate, setPlate] = useState('null');
+    const [selected, setSelected] = useState(null)
+
 
     const [idx, setIdx] = useState(null);
     const [plateHover, setPlateHover] = useState(false);
@@ -108,6 +111,7 @@ export default function About() {
 
 
     const handleMouseEnter = (e) => {
+        setSelected(e.target.innerText);
         const selected = e.target.innerText;
         const body = document.getElementById('body');
         switch (selected){
@@ -132,6 +136,44 @@ export default function About() {
         }
 
         }
+    
+    const handleSelection = (selected) => {
+        const body = document.getElementById('body');
+        if (selected !== null){
+            switch (selected) {
+                case '2018':
+                    setCirc1(false)
+                    setCirc3(false)
+                    setPlateHover(true)
+                    setIdx(0)
+                    body.classList.remove('plate-green')
+                    body.classList.remove('plate-purple')
+                    break
+                
+                case '2019':
+                    setCirc2(false)
+                    setCirc3(false)
+                    setPlateHover(true)
+                    setIdx(1)
+                    body.classList.remove('plate-blue')
+                    body.classList.remove('plate-purple')
+                    break
+                case '2020':
+                    setCirc2(false)
+                    setCirc1(false)
+                    setPlateHover(true)
+                    setIdx(2)
+                    body.classList.remove('plate-blue')
+                    body.classList.remove('plate-green')
+                    break
+
+            }
+        }
+    }
+
+    useEffect (() => {
+        handleSelection(selected);
+    }, [selected])
 
     const handleMouseLeave = (e) => {
         const selected = e.target.innerText;

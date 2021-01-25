@@ -137,8 +137,19 @@
     }
 }
 
+@media screen and (max-width: 1450px) {
+    :root {
+        --plate-y-offset: 0.1vh;
+    }
+    .container--timeplate {
+        width: 35.2vw;
+    }
+}
+
 @media screen and (max-width: 1025px) {
-    :root {}
+    :root {
+        --plate-y-offset: 0.2vh;
+    }
     .container--timeplate {
         width: 35vw;
     }

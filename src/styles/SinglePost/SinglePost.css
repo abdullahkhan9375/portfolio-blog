@@ -35,10 +35,19 @@
     align-self: start;
 }
 
+.aside--cat {
+    width: 50%;
+    height: 10%;
+}
+
 .aside--cat img {
     width: 20px;
     height: 20px;
     margin-right: 0.5em;
+}
+
+#tag--icon {
+    margin-right: 0.7em;
 }
 
 .aside--tag {
@@ -145,11 +154,19 @@ p {
         position: relative;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
         top: 0%;
         left: 0%;
         width: 100%;
         height: 15%;
+    }
+    .aside--cat {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    .aside--cat *{
+        margin: 0.2em 0.2em 0em 0em;
     }
 }

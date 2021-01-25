@@ -48,6 +48,15 @@
 
 /* @media screen and (max-w) */
 
+@media screen and (max-width : 1025px){
+    .time-2018{
+        transform: translateY(-5px);
+    }
+    .time-2020 {
+        transform: translateY(5px);
+    }
+}
+
 @media screen and (max-width: 768px) {
     .container--time {
         position: relative;
@@ -61,6 +70,7 @@
     .time--item {
         cursor: pointer;
         width: 18vh;
+        height: 8.5vh;
         border-radius: 5px;
         text-decoration: none;
         font-size: 0.8rem;
@@ -74,12 +84,15 @@
         color: var(--main-black);
     }
     .time-2018 {
+        transform: none;
         background: var(--plate-1-lg);
     }
     .time-2019 {
+        transform: none;
         background: var(--plate-2-lg);
     }
     .time-2020 {
+        transform: none;
         background: var(--plate-3-lg);
     }
 }

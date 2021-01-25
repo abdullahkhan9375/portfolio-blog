@@ -1,3 +1,4 @@
+@import './../Variables.css';
 :root {
     --x-offset-timeline: 390%;
     --y-offset-timeline: 0.75%;
@@ -52,7 +53,7 @@
     width: 75%;
     height: 9%;
     border-radius: 4px;
-    background-color: black;
+    background-color: var(--main-white);
     transform: translateX(-0.3px);
 }
 
@@ -61,6 +62,7 @@
     height: 9%;
     border-radius: 4px;
     background-color: black;
+    background-color: var(--main-white);
     transform: rotateZ(90deg) translateX(-2.3px);
 }
 
@@ -147,7 +149,30 @@
 
 @media screen and (max-width: 1450px) {
     :root {
-        --x-offset-timeline: 450%;
+        --x-offset-timeline: 400%;
+        --line-x-offset : 900%;
+    }
+    .timeline--half-circle {
+        border: 2px solid var(--main-blue);
+        border-bottom: none;
+        width: 8vh;
+        height: 4.5vh;
+    }
+    .timeline--line {
+        width: 0.12vw;
+        height: 29vh;
+    }
+    .container--cross {
+        transform: scale(0.8) rotate(45deg);
+    }
+    #cross_3 {
+        left: 49%;
+    }
+    .time-2018 {
+        transform: translateY(-5px);
+    }
+    .time-2020 {
+        transform: translateY(5px);
     }
 }
 
@@ -159,7 +184,24 @@
 
 @media screen and (max-width: 1025px) {
     :root {
-        --x-offset-timeline: 260%;
+        --x-offset-timeline: 270%;
+        --line-x-offset: 750%;
+    }
+    .timeline--half-circle {
+        border: 2px solid var(--main-blue);
+        border-bottom: none;
+        width: 8vh;
+        height: 4.5vh;
+    }
+    .timeline--line {
+        width: 0.171vw;
+        height: 29vh;
+    }
+    .container--cross {
+        transform: scale(0.8) rotate(45deg);
+    }
+    #cross_3 {
+        left: 49%;
     }
 }
 
@@ -170,11 +212,10 @@
 }
 
 @media screen and (max-width: 768px) {
-    
     :root {
         --x-offset-timeline: 100%;
     }
-    .container--cross{
+    .container--cross {
         display: none;
     }
     .container--timeline-main {
