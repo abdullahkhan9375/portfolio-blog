@@ -53,7 +53,7 @@
     width: 75%;
     height: 9%;
     border-radius: 4px;
-    background-color: var(--main-white);
+    background-color: var(--main-white-ALWAYS);
     transform: translateX(-0.3px);
 }
 
@@ -62,7 +62,7 @@
     height: 9%;
     border-radius: 4px;
     background-color: black;
-    background-color: var(--main-white);
+    background-color: var(--main-white-ALWAYS);
     transform: rotateZ(90deg) translateX(-2.3px);
 }
 
@@ -150,7 +150,7 @@
 @media screen and (max-width: 1450px) {
     :root {
         --x-offset-timeline: 400%;
-        --line-x-offset : 900%;
+        --line-x-offset: 900%;
     }
     .timeline--half-circle {
         border: 2px solid var(--main-blue);

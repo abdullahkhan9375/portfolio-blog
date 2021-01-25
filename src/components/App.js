@@ -33,7 +33,7 @@ export default function App() {
         <Switch_Mode getTheme = {getTheme}></Switch_Mode>
             <Switch>
                 <Route component = {Home} exact path = "/"/>
-                <Route component = {About} path = "/about"/>
+                <Route render={(theme) => (<About theme = {theme} />)} path = "/about"/>
                 <Route component = {SinglePost} path = "/post/:slug"/>
                 <Route component = {SingleProject} path = "/project/:slug"/>
                 <Route component = {Post} path = "/post"/>

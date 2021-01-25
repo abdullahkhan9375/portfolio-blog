@@ -7,7 +7,6 @@ import {useState, useEffect, useRef} from 'react';
 import TimePlate from './../Widgets/TimePlate';
 import Switch from 'react-bootstrap/esm/Switch';
 
-
 const timePlates = [
     {
         id : '2018',
@@ -43,8 +42,8 @@ const timePlates = [
     }
 ]
 
-export default function About() {
-
+export default function About(props) {
+    const timeRef = useRef();
     const [circ1, setCirc1] = useState(false);
     const [circ2, setCirc2] = useState(false);
     const [circ3, setCirc3] = useState(false);
@@ -171,6 +170,32 @@ export default function About() {
         }
     }
 
+    function useOutsideAlerter(ref) {
+    useEffect(() => {
+        /**
+         * Alert if clicked on outside of element
+         */
+        function handleClickOutside(event) {
+            const body = document.getElementById('body');
+            if (ref.current && !ref.current.contains(event.target)) {
+                setCirc1(false)
+                setCirc2(false)
+                setCirc3(false)
+                setPlateHover(false)
+                body.classList.remove('plate-blue')
+                body.classList.remove('plate-green')
+                body.classList.remove('plate-purple')
+                console.log('done')
+            }
+        }
+
+        // Bind the event listener
+        document.addEventListener("mousedown", handleClickOutside);
+    }, []);
+}
+
+    useOutsideAlerter(back)
+
     useEffect (() => {
         handleSelection(selected);
     }, [selected])
@@ -288,7 +313,6 @@ export default function About() {
             </div>
         </div>
         <div className = "container--time">
-            
                 <div onClick = {(e) => handleMouseEnter(e)} className = "time--item time-2018">
                     <h2> 2018 </h2>
                 </div>
@@ -299,7 +323,7 @@ export default function About() {
                     <h2> 2020 </h2>
                 </div>
         </div>
-        <motion.div id = "cross_1" className = "container--cross" transition = {spring} animate = {{opacity : circ2 ? 1 : 0}} 
+        <motion.div id = "cross_1" className = "container--cross" transition = {spring} animate = {        {opacity : circ2 ? 1 : 0}} 
         onClick = {(e) => handleMouseLeave(e)}>
             2018
                     <div  onClick = {(e) => handleMouseLeave(e)} className = "cross-1">
@@ -308,9 +332,8 @@ export default function About() {
                     <div  onClick = {(e) => handleMouseLeave(e)} className = "cross-2">
                         2018
                     </div>
-
-                </motion.div>
-                <motion.div id = "cross_1" className = "container--cross" transition = {spring} animate = {{opacity : circ1 ? 1 : 0}} id = "cross_2" onClick = {(e) => handleMouseLeave(e)} className = "container--cross">
+        </motion.div>
+        <motion.div id = "cross_1" className = "container--cross" transition = {spring} animate = {{opacity : circ1 ? 1 : 0}} id = "cross_2" onClick = {(e) => handleMouseLeave(e)} className = "container--cross">
                     2019
                     <div  onClick = {(e) => handleMouseLeave(e)} className = "cross-1">
                     2019
@@ -319,8 +342,8 @@ export default function About() {
                         2019
                     </div>
 
-                </motion.div>
-                <motion.div id = "cross_1" className = "container--cross" transition = {spring} animate = {{opacity : circ3 ? 1 : 0}} id = "cross_3" onClick = {(e) => handleMouseLeave(e)} className = "container--cross">
+        </motion.div>
+        <motion.div id = "cross_1" className = "container--cross" transition = {spring} animate = {{opacity : circ3 ? 1 : 0}} id = "cross_3" onClick = {(e) => handleMouseLeave(e)} className = "container--cross">
                     <div onClick = {(e) => handleMouseLeave(e)} className = "cross cross-1">
                     2020
                     </div>
@@ -328,9 +351,9 @@ export default function About() {
                     2020  
                     </div>
                     2020
-                </motion.div>
+        </motion.div>
         <motion.div ref = {back} transition = {{duration : 1}} animate = {anim} className = {`container--timeplate ${plate.class}`}>
-            {plate === null ? null : <TimePlate plate = {plate}></TimePlate>}
+                    {plate === null ? null : <TimePlate ref = {timeRef} plate = {plate}></TimePlate>}
         </motion.div>
         </>
     )
